@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>METRO 2039</title>
+  <meta name="description" content="METRO 2039 — четвёртая часть серии Metro от 4A Games. Мир, сюжет, персонажи, Новорейх, бестиарий, геймплей и издания. Выход 4 февраля 2027.">
+  <meta name="theme-color" content="#0d0c0a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230d0c0a'/%3E%3Cpath d='M10 50V14h9l13 20 13-20h9v36h-9V30L32 48 19 30v20z' fill='%23e8742c'/%3E%3C/svg%3E">
+  <link rel="preload" href="assets/img/hero.webp" as="image">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="vendor/lenis.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <noscript><style>.is-loading .hero__content { opacity: 1; } .horror__dark, .door-gl { display: none; }</style></noscript>
+</head>
+<body class="is-loading">
+
+  <a class="skip" href="#about">Перейти к содержанию</a>
+
+  <header class="topbar">
+    <a class="topbar__logo" href="#top" aria-label="METRO 2039 — в начало">
+      <img decoding="async" src="assets/img/logo.png" alt="" width="132" height="46">
+    </a>
+    <div class="topbar__actions">
+      <button class="sound-btn" type="button" aria-pressed="false" aria-label="Включить звук">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="sound-btn__body" d="M4 9h4l5-4v14l-5-4H4z"/><path class="sound-btn__wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/><path class="sound-btn__off" d="M16 9l6 6M22 9l-6 6"/></svg>
+        <span class="sound-btn__label">Звук</span>
+      </button>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="line-menu">
+        <span class="menu-btn__label">Схема линии</span>
+        <span class="menu-btn__icon" aria-hidden="true"><i></i><i></i></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="line-menu" id="line-menu" hidden>
+    <nav aria-label="Разделы сайта">
+      <ol class="line-menu__list">
+        <li><a href="#top">Начало</a></li>
+        <li><a href="#about">Об игре</a></li>
+        <li><a href="#world">Мир</a></li>
+        <li><a href="#story">Сюжет</a></li>
+        <li><a href="#characters">Персонажи</a></li>
+        <li><a href="#novoreich">Новорейх</a></li>
+        <li><a href="#locations">Локации</a></li>
+        <li><a href="#bestiary">Бестиарий</a></li>
+        <li><a href="#horror">Хоррор</a></li>
+        <li><a href="#gameplay">Геймплей</a></li>
+        <li><a href="#editions">Издания</a></li>
+        <li><a href="#dev">Разработка</a></li>
+        <li class="is-terminal"><a href="#countdown">До выхода</a></li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="hud" aria-hidden="true"></div>
+
+  <main>
+
+    <section class="hero" id="top" data-theme="ash" data-rad="high">
+      <div class="hero__media">
+        <img decoding="async" src="assets/img/hero.webp" alt="Чужак в противогазе с винтовкой на фоне горящих руин Москвы" width="2560" height="1440" fetchpriority="high">
+      </div>
+      <canvas class="hero__embers" aria-hidden="true"></canvas>
+      <div class="hero__shade" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <h1 class="hero__logo is-whole">
+          <span class="sr-only">METRO 2039</span>
+          <span class="shards" aria-hidden="true"></span>
+        </h1>
+        <p class="hero__tagline">Защити Метро… от вас самих</p>
+        <p class="hero__date">4 февраля 2027 на PS5, Xbox Series X|S и PC</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="https://store.steampowered.com/app/2590240/METRO_2039/" target="_blank" rel="noopener">Предзаказ в Steam</a>
+          <a class="btn btn--ghost" href="#about">Спуститься</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about" data-theme="ash" data-rad="mid">
+      <div class="wrap about__grid">
+        <div class="about__lead">
+          <h2 class="display">Четвёртая часть. Прямой сиквел Exodus.</h2>
+          <p class="lead">Одиночный шутер от первого лица о выживании и страхе. Прошло четверть века после ядерной войны. Москва, тоннели метро и отравленная поверхность над ними.</p>
+          <p>Серия возвращается к тесным тоннелям и клаустрофобии первых частей, но сохраняет большие открытые зоны Exodus. Сами разработчики называют 2039 самой мрачной и самой взрослой игрой серии. За две недели после первого показа игру добавили в список желаемого миллион человек.</p>
+        </div>
+        <table class="specs">
+          <caption class="sr-only">Коротко об игре</caption>
+          <tr><th scope="row">Разработчик</th><td>4A Games, Киев и Слима (Мальта)</td></tr>
+          <tr><th scope="row">Издатель</th><td>Deep Silver / PLAION</td></tr>
+          <tr><th scope="row">Выход</th><td>4 февраля 2027</td></tr>
+          <tr><th scope="row">Платформы</th><td>PS5 и PS5 Pro, Xbox Series X|S, PC (Steam, Epic, Microsoft Store)</td></tr>
+          <tr><th scope="row">Движок</th><td>4A Engine, перестроенный с нуля</td></tr>
+          <tr><th scope="row">Режим</th><td>Только одиночная кампания</td></tr>
+          <tr><th scope="row">Рейтинг</th><td>PEGI 18, ESRB Mature 17+</td></tr>
+          <tr><th scope="row">Герой</th><td>Чужак, первый полностью озвученный протагонист серии</td></tr>
+        </table>
+      </div>
+      <figure class="about__strip">
+        <img decoding="async" src="assets/img/world-ruins.webp" alt="Разрушенные многоэтажки Москвы, болото и красная буква «М» над входом в метро" width="1920" height="1080" loading="lazy">
+      </figure>
+    </section>
+
+    <section class="world" id="world" data-theme="surface" data-rad="high">
+      <div class="door-stage">
+        <div class="door-layer door-layer--tunnel">
+          <img decoding="async" src="assets/img/world-tunnel.webp" alt="Тёмная лестница в тоннель метро за открытым гермозатвором" width="1920" height="1080" loading="lazy">
+        </div>
+        <canvas class="door-gl" aria-hidden="true"></canvas>
+        <div class="door-layer door-layer--bridge">
+          <img decoding="async" src="assets/img/world-bridge.webp" alt="Разрушенный железнодорожный мост над болотом на закате" width="1920" height="1080" loading="lazy">
+        </div>
+
+        <div class="door-caption door-caption--bridge">
+          <h2 class="display">В Exodus Артём нашёл чистую землю.</h2>
+          <p>Плодородный край на востоке, почти не тронутый радиацией. Казалось, жизнь под землёй закончилась.</p>
+        </div>
+        <div class="door-caption door-caption--tunnel">
+          <h2 class="display">В 2039 все снова живут под землёй.</h2>
+          <p>Атомная зима медленно сходит. Поверхность оттаивает, но остаётся смертельно радиоактивной.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="world-after" data-theme="tunnel" data-rad="low">
+      <div class="wrap world-after__grid">
+        <h2 class="display">Сердце сгнило</h2>
+        <div class="world-after__text">
+          <p class="lead">Четверть века выжившие воевали друг с другом в тоннелях под отравленной Москвой. В конце концов их объединил один человек, фанатичный спартанец Хантер.</p>
+          <p>Он основал <b>Новорейх</b>. Это государство подмяло под себя почти все станции и истощённые войной фракции: Четвёртый Рейх, Красную линию, Ганзу. Мира не случилось. Режим держится на пропаганде и страхе и готовит людей к новой войне за поверхность против «тёмного и ужасающего врага».</p>
+          <p class="pull">«В METRO 2039 это сердце сгнило, стало апатичным и мрачнее, чем когда-либо».</p>
+        </div>
+      </div>
+      <p class="wrap themes">Цена молчания. Ужасы тирании. Цена свободы. Война как культ.</p>
+    </section>
+
+    <section class="story" id="story" data-theme="story" data-rad="mid">
+      <div class="film">
+        <div class="film__sprockets film__sprockets--top" aria-hidden="true"></div>
+        <div class="film__track">
+          <article class="film__panel film__panel--intro">
+            <div class="film__intro">
+              <h2 class="display">Игра без героев</h2>
+              <p class="lead">Полный сюжет пока держат в секрете. Из официального описания, трейлеров и превью складываются четыре кадра.</p>
+            </div>
+          </article>
+
+          <article class="film__panel">
+            <div class="film__img"><img decoding="async" src="assets/img/story-swamp.webp" alt="Чужак в броне и противогазе идёт по туманному болоту" width="1920" height="1080" loading="lazy"></div>
+            <div class="film__text">
+              <h3>Отшельник</h3>
+              <p>Далеко за Москвой живёт отшельник по прозвищу Чужак. Когда-то он был спартанцем, но его изгнали из метро против его воли. Его мучают кошмары наяву и призраки прошлого. Он возвращается туда, куда поклялся больше не спускаться, чтобы найти и убить Хантера.</p>
+            </div>
+          </article>
+
+          <article class="film__panel">
+            <div class="film__img"><img decoding="async" src="assets/img/story-station.webp" alt="Жилая станция Севастопольская: люди у костров, торговцы, лампы" width="1920" height="1080" loading="lazy"></div>
+            <div class="film__text">
+              <h3>Севастопольская</h3>
+              <p>Независимый форпост на грани оккупации. Изнутри его подтачивают агитаторы и шпионы, снаружи давят рейдеры, которых натравливает Новорейх. Чужак договаривается с начальником станции Истоминым: он разберётся с рейдерами, а взамен получит информацию.</p>
+            </div>
+          </article>
+
+          <article class="film__panel">
+            <div class="film__img"><img decoding="async" src="assets/img/story-train.webp" alt="Офицеры Новорейха у вагона с номером 2039, из окна тянется детская рука" width="1920" height="842" loading="lazy"></div>
+            <div class="film__text">
+              <h3>Поезд 2039</h3>
+              <p>Поезд Новорейха везёт похищенных детей на перевоспитание. В классе хором повторяют «Враг должен быть уничтожен», на перроне остаётся груда детской обуви.</p>
+              <p class="film__quote">«Это игра без героев, потому что действие происходит в мире без героев», говорит креативный директор Андрей Шевченко.</p>
+            </div>
+          </article>
+
+          <article class="film__panel">
+            <div class="film__img"><img decoding="async" src="assets/img/story-dark.webp" alt="Размытая фигура Тёмного, тянущего руку к камере" width="1920" height="823" loading="lazy"></div>
+            <div class="film__text">
+              <h3>Тёмные вернулись</h3>
+              <p>В финале трейлера появляются Тёмные в новом облике, ближе к телесному хоррору. В Metro 2033 Артём почти уничтожил их ракетным ударом, в Last Light выяснилось, что выводок уцелел. Теперь они пробираются в голову Чужака: в его кошмаре он под их контролем стреляет в детей.</p>
+              <button class="trailer-btn" type="button" data-yt="vgBAOYIwp9I" data-title="Reveal Trailer">
+                <span class="trailer-btn__play" aria-hidden="true"></span>
+                <span>Смотреть Reveal Trailer</span>
+              </button>
+            </div>
+          </article>
+        </div>
+        <div class="film__sprockets film__sprockets--bottom" aria-hidden="true"></div>
+        <div class="film__counter" aria-hidden="true"><b>0</b>/4</div>
+      </div>
+    </section>
+
+    <section class="chars" id="characters" data-theme="ash" data-rad="low">
+      <article class="stranger">
+        <figure class="stranger__media">
+          <img decoding="async" src="assets/img/char-stranger.webp" alt="Чужак в спартанском шлеме с буквой «М» и противогазе" width="1920" height="822" loading="lazy">
+        </figure>
+        <div class="wrap stranger__body">
+          <div>
+            <h2 class="name">Чужак</h2>
+            <p class="name__sub">The Stranger, главный герой</p>
+            <p class="pull">«Спартанцы были волками. Но Чужак нечто хуже. Он гораздо хуже».</p>
+          </div>
+          <div class="stranger__text">
+            <p>Бывший спартанский воин с тёмным прошлым, «жестокий настолько, насколько адаптивный». Носит броню и шлем с буквой «М» Ордена спартанцев.</p>
+            <p>Он первый полностью озвученный герой основной серии: Артём всегда молчал. И он не герой. Жители Севастопольской ему безразличны, он вернулся только за информацией. Настоящий мотив пока скрыт; фанаты гадают, не ищет ли он похищенного ребёнка.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="hunter">
+        <figure class="hunter__media">
+          <img decoding="async" src="assets/img/char-hunter-uniform.webp" alt="Хантер в парадном мундире с эполетами и противогазе, кадр из трейлера Hunter" width="1360" height="715" loading="lazy">
+        </figure>
+        <div class="wrap hunter__body">
+          <div class="hunter__head">
+            <h2 class="name">Хантер</h2>
+            <p class="name__sub">Фюрер Новорейха, главный антагонист</p>
+          </div>
+          <div class="hunter__text">
+            <p class="lead">«Первый и величайший спартанец», один из основателей Ордена. В начале Metro 2033 он отправил Артёма в Полис и пропал в тоннелях. Все считали его погибшим.</p>
+            <p>В романе «Метро 2034» он выжил, но был искалечен и телом, и душой, ушёл из Ордена и прятался на Севастопольской под защитным шлемом. К 2039 году он возглавил Новорейх и правит метро железной рукой. Его форма превращает спартанскую броню в парадный мундир, а его лицо смотрит с каждого плаката.</p>
+            <p class="pull">«Мы защитники Метро. Если оно враждебно, убей его». <span>Хантер, Metro 2033</span></p>
+            <p class="hunter__note">Кадр из трейлера «Hunter», Xbox Games Showcase 2026. До перезапуска в 2022 году Хантер должен был стать главным героем игры.</p>
+          </div>
+        </div>
+      </article>
+
+      <div class="wrap cast">
+        <h3 class="cast__title">На Севастопольской</h3>
+        <dl class="cast__list">
+          <div><dt>Владимир Истомин</dt><dd>Начальник станции. Грузный, с повязкой на глазу, курит самокрутки и работает в полумраке. Единственный, кто знал Хантера в прошлой жизни.</dd></div>
+          <div><dt>Валентина</dt><dd>Заведует складом и фермой, делит пайки. Почти каждую ночь видит во сне погибшего мужа.</dd></div>
+          <div><dt>Кабан</dt><dd>Главарь рейдеров, главная угроза станции. Его военная база есть на карте.</dd></div>
+          <div><dt>Артём</dt><dd>Герой прошлых частей уехал на поезде в Exodus и пропал. Москва и её метро остались, к ним 4A и вернулись.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="reich" id="novoreich" data-theme="reich" data-rad="low">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__row"><span>Новорейх приказывает — народ подчиняется ◆ Новорейх приказывает — народ подчиняется ◆&nbsp;</span><span>Новорейх приказывает — народ подчиняется ◆ Новорейх приказывает — народ подчиняется ◆&nbsp;</span></div>
+      </div>
+
+      <div class="wrap reich__poster">
+        <div class="reich__emblem" aria-hidden="true">
+          <img decoding="async" src="assets/img/nr-flag.webp" alt="" width="1600" height="1066" loading="lazy">
+        </div>
+        <div class="reich__head">
+          <h2 class="reich__slogan">
+            <span class="slam">Чистая нация.</span>
+            <span class="slam">Чистый воздух.</span>
+            <span class="slam">Светлое будущее.</span>
+          </h2>
+          <p class="lead">Новорейх объединил почти всё метро под одним знаменем. Он вырос из Четвёртого Рейха прошлых игр, и впервые в серии станции подчиняются одной власти.</p>
+        </div>
+      </div>
+
+      <div class="wrap reich__grid">
+        <figure class="reich__propaganda">
+          <img decoding="async" src="assets/img/nr-poster.webp" alt="Плакат Новорейха: Хантер отдаёт честь, внизу дети, подпись «A safer future for the next generation»" width="640" height="790" loading="lazy">
+        </figure>
+        <ol class="reich__list">
+          <li><h3>Пропаганда и страх</h3><p>Плакаты, мерцающие экраны и громкоговорители повторяют одну и ту же мантру.</p></li>
+          <li><h3>Дети</h3><p>Поезда-конвои и классы, где хором звучит: «Новорейх — наш дом. Либо мы уничтожаем, либо нас. Милосердие — слабость».</p></li>
+          <li><h3>Армия</h3><p>Фюрер, его командиры и солдаты с автоматами Калаша. Рейдеры воюют за режим против независимых станций.</p></li>
+          <li><h3>Крепость в дамбе</h3><p>Твердыня режима спрятана внутри огромной дамбы. Цель военной машины — захватить поверхность.</p></li>
+        </ol>
+      </div>
+
+      <figure class="reich__hall">
+        <img decoding="async" src="assets/img/nr-hall.webp" alt="Зал Новорейха: красные знамёна с эмблемой, ковровая дорожка, солдаты в лучах света" width="1920" height="1080" loading="lazy">
+        <figcaption>«Враг должен быть уничтожен»</figcaption>
+      </figure>
+    </section>
+
+    <section class="locs" id="locations" data-theme="surface" data-rad="high">
+      <div class="wrap locs__head">
+        <h2 class="display">Болота, руины и тоннели</h2>
+        <p class="lead">Москва и её метро с выходами на поверхность. Чем дальше от станции, тем опаснее.</p>
+      </div>
+      <div class="locs__index">
+        <div class="locs__view" aria-live="polite">
+          <figure class="locs__frame is-active" data-loc="0"><img decoding="async" src="assets/img/loc-post.webp" alt="Здание почты у грязной дороги со ржавыми машинами" width="2560" height="1440" loading="lazy"></figure>
+          <figure class="locs__frame" data-loc="1"><img decoding="async" src="assets/img/loc-berlin.webp" alt="Разрушенный зал отеля «Берлин» с горами мусора" width="2560" height="1440" loading="lazy"></figure>
+          <figure class="locs__frame" data-loc="2"><img decoding="async" src="assets/img/loc-swampnight.webp" alt="Ночное болото, сухие деревья, прожектор на вышке" width="2544" height="1216" loading="lazy"></figure>
+          <figure class="locs__frame" data-loc="3"><img decoding="async" src="assets/img/loc-nightfight.webp" alt="Ночной бой у деревянных построек, пламя и мутант в траве" width="1920" height="1080" loading="lazy"></figure>
+          <figure class="locs__frame" data-loc="4"><img decoding="async" src="assets/img/loc-redsquare.webp" alt="Силуэт Чужака перед собором Василия Блаженного на фоне ядерного взрыва" width="2560" height="1069" loading="lazy"></figure>
+        </div>
+        <ul class="locs__list">
+          <li><button type="button" data-loc="0" aria-pressed="true"><b>Здание почты</b><span>Грязная дорога в разбитых машинах, всё заросло вьюнком.</span></button></li>
+          <li><button type="button" data-loc="1" aria-pressed="false"><b>Отель «Берлин»</b><span>Груды мусора, тела и тишина.</span></button></li>
+          <li><button type="button" data-loc="2" aria-pressed="false"><b>Болота</b><span>Прожекторы, вышки и вода, в которой кто-то живёт.</span></button></li>
+          <li><button type="button" data-loc="3" aria-pressed="false"><b>Ночная вылазка</b><span>На выстрел сбегаются мутанты со всего района.</span></button></li>
+          <li><button type="button" data-loc="4" aria-pressed="false"><b>Красная площадь</b><span>Руины в огне, в трейлере над ними кружат Демоны.</span></button></li>
+        </ul>
+      </div>
+      <div class="wrap locs__stations">
+        <div>
+          <h3 class="subhead">Станции рядом</h3>
+          <p><b>Севастопольская</b> — стартовый хаб с десятками жителей, торговцами и долгими разговорами о пайках и слухах. В реальности это станция мелкого заложения, 8 метров, белый мрамор и 24 мозаичных панно о Крыме. Жизнь кипит в коллекторах под платформой, там устроены фермы. <b>Каховская</b> входит в её оборонительный периметр, <b>Варшавская</b> тоже упоминается.</p>
+        </div>
+        <aside class="legend">
+          <h3 class="subhead">Легенда станции</h3>
+          <p>Ходок с Добрынинской ночью услышал детский смех, а потом увидел ярко освещённый поезд-призрак с безмолвными людьми. В последнем вагоне смеющийся ребёнок показывал на него пальцем. С тех пор у станции дурная слава, и начальство её охотно поддерживает.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="beasts" id="bestiary" data-theme="beast" data-rad="mid">
+      <div class="wrap beasts__head">
+        <h2 class="display">Они мутировали сильнее</h2>
+        <p class="lead">Мутанты охотятся семейными стаями: разные виды нападают вместе, и оружие с тактикой приходится менять на ходу.</p>
+      </div>
+      <figure class="beast beast--lead">
+        <img decoding="async" src="assets/img/story-dark.webp" alt="Тёмный в новом облике телесного хоррора" width="1920" height="823" loading="lazy">
+        <figcaption class="wrap"><b>Тёмные</b> Вместо чужеродных существ прошлых игр почти биологические лица, похожие на противогазы.</figcaption>
+      </figure>
+      <div class="wrap beasts__pair">
+        <figure class="beast beast--wide">
+          <img decoding="async" src="assets/img/beast-watchmen.webp" alt="Стая Стражей нападает среди ржавых машин" width="1500" height="835" loading="lazy">
+          <figcaption><b>Стражи</b> Прыгучие звери, которые метают шипы с хвоста и всегда нападают стаей.</figcaption>
+        </figure>
+        <figure class="beast beast--narrow">
+          <img decoding="async" src="assets/img/beast-mutant.webp" alt="Бледный клыкастый мутант с шипами вцепился в героя" width="1920" height="1080" loading="lazy">
+          <figcaption><b>Кадр из трейлера</b> В игре есть мини-босс: 2,7-метровый мутант со свитой в канализационной воде.</figcaption>
+        </figure>
+      </div>
+      <p class="wrap beasts__more">Ещё в списке <b>Демоны</b>, которые кружат над Красной площадью, <b>Упыри</b>, гигантские комары, доисторические ракообразные из коллекторов и новые летающие инсектоиды.</p>
+    </section>
+
+    <section class="horror" id="horror" data-theme="horror" data-rad="none">
+      <div class="horror__room">
+        <div class="horror__grid">
+          <div class="horror__col">
+            <figure class="h-item"><img decoding="async" src="assets/img/horror-woman.webp" alt="Старуха в косынке с безумной улыбкой и глазами разного цвета" width="1600" height="853" loading="lazy"><figcaption><b>Рупор Тёмных.</b> Один глаз голубой, другой жёлтый.</figcaption></figure>
+            <figure class="h-item"><img decoding="async" src="assets/img/horror-child.webp" alt="Лицо ребёнка в ушанке, освещённое огнём" width="1600" height="853" loading="lazy"><figcaption><b>Детский сад.</b> Электроника отказывает, остаются зажигалка и свеча. Даже мутанты обходят это место.</figcaption></figure>
+          </div>
+          <div class="horror__center">
+            <blockquote class="horror__quote">«Когда душа покидает тело, ей некуда идти, и она остаётся здесь, в Метро».</blockquote>
+            <p class="horror__cite">Хан, Metro 2033</p>
+            <p class="horror__hint"><span class="only-pointer">Ведите курсором, это ваша зажигалка</span><span class="only-touch">Листайте, пламя найдёт дорогу</span></p>
+          </div>
+          <div class="horror__col">
+            <figure class="h-item"><img decoding="async" src="assets/img/horror-drawings.webp" alt="Детский рисунок с фигурками детей в руках в перчатках" width="1600" height="823" loading="lazy"><figcaption><b>Аномалии.</b> Безымянные зоны на поверхности: танцующие тени и смех детей на ветру.</figcaption></figure>
+            <figure class="h-item"><img decoding="async" src="assets/img/horror-elephant.webp" alt="Деревянный слоник посреди пожара" width="1309" height="790" loading="lazy"><figcaption><b>Деревянный слон.</b> Сквозной мотив трейлера: слон в парке, парк в огне, рисунок мёртвых детей.</figcaption></figure>
+          </div>
+        </div>
+        <div class="horror__dark" aria-hidden="true"></div>
+        <div class="horror__glow" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="gp" id="gameplay" data-theme="olive" data-rad="mid">
+      <div class="gp__layout">
+        <div class="gp__media" aria-hidden="true">
+          <div class="gp__frame">
+            <img decoding="async" class="is-active" src="assets/img/world-ruins.webp" alt="" width="1920" height="1080" loading="lazy">
+            <img decoding="async" src="assets/img/gp-stealth.webp" alt="" width="1920" height="843" loading="lazy">
+            <img decoding="async" src="assets/img/gp-watch.webp" alt="" width="1328" height="675" loading="lazy">
+            <img decoding="async" src="assets/img/char-stranger-mask.webp" alt="" width="1988" height="1224" loading="lazy">
+            <img decoding="async" src="assets/img/gp-armorer.webp" alt="" width="2560" height="1440" loading="lazy">
+            <img decoding="async" src="assets/img/gp-blueprint.webp" alt="" width="2210" height="1326" loading="lazy">
+          </div>
+        </div>
+        <div class="gp__steps">
+          <h2 class="display gp__title">Выживание как головоломка</h2>
+          <article class="gp__step">
+            <h3>Полуоткрытый мир</h3>
+            <p>Тесные тоннели чередуются с широкими зонами на поверхности. В них полно необязательных мест: заброшенные дома, гаражи, подземные переходы, аптека, отель, снайперские позиции и тайные ходы. Это не открытый мир с вышками и значками. 4A взяли из Exodus идею исследования и пошли дальше.</p>
+            <p>Станции соединены тоннелями, убежище можно обустраивать: самогонный аппарат даёт бутылку в день. Игра сохраняется, когда подписываешь документы на станции.</p>
+          </article>
+          <article class="gp__step">
+            <h3>Громко или тихо</h3>
+            <p>У многих мест по три-четыре входа. Можно идти напролом с гранатами и коктейлями Молотова, а можно тихо: ножом, метательными ножами, выглядывая из-за угла и в ночном видении. Укрытия разрушаются, смерть приходит быстро.</p>
+            <p class="pull">«Спартанец знает, когда молчать, и выбирает, когда шуметь». <span>Трейлер Renegade</span></p>
+          </article>
+          <article class="gp__step">
+            <h3>Часы, огонь и ультрафиолет</h3>
+            <p>На запястье компас, дозиметр и таймер фильтра; в трейлере часы показывают 20:39. Ультрафиолетовый фонарь проявляет метки и тайники, на него реагируют некоторые мутанты. Паяльная лампа вскрывает заваренные двери, зажигалка выжигает паутину, а её пламя под землёй работает как компас. Взрывчатка с пружинным таймером пробивает короткий путь сквозь стену. Замки взламывают, коды подбирают.</p>
+          </article>
+          <article class="gp__step">
+            <h3>Дышать по таймеру</h3>
+            <p>Радиация решает всё: доза спадает, только когда уходишь из зоны. Фильтры противогаза кончаются быстро, их приходится мастерить. Под землёй попадаются места с чистым воздухом, где маску можно снять.</p>
+            <p>Планшет с картой не ставит игру на паузу, и читать его под огнём или в радиации опасно.</p>
+          </article>
+          <article class="gp__step">
+            <h3>Верстак и уход</h3>
+            <p>Мелкий крафт делается на ходу из рюкзака, но серьёзная прокачка оружия и костюма возможна только на верстаке. Оружие надо чистить, иначе оно даёт осечки. От кармы и решений сохранить жизнь зависит, как к тебе относятся люди.</p>
+          </article>
+          <article class="gp__step">
+            <h3>Чертежи и стволы</h3>
+            <p><b>Шатун</b> — новая тихая пневматическая винтовка, стреляет свёрлами, которые можно подобрать, и убивает с одного точного попадания. <b>Шамблер</b> — револьверный дробовик, с ним Чужак идёт по болоту в первом трейлере. Вернулась двустволка <b>Дуплет</b>, есть Калаш, оружие на батареях, метательные ножи и коктейли Молотова.</p>
+            <p>Три основных слота плюс четвёртый для фирменного оружия. Апгрейды открываются чертежами, армейские патроны снова служат валютой.</p>
+          </article>
+        </div>
+      </div>
+      <div class="wrap gp__trailer">
+        <button class="trailer-card" type="button" data-yt="5ohnFnJwWjI" data-title="Renegade">
+          <img decoding="async" src="assets/img/loc-nightfight.webp" alt="" width="1920" height="1080" loading="lazy">
+          <span class="trailer-card__play" aria-hidden="true"></span>
+          <span class="trailer-card__text"><b>Трейлер «Renegade»</b><small>Gamescom 2026, награда за лучшую графику выставки</small></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="tech" id="tech" data-theme="ash" data-rad="low">
+      <div class="wrap tech__grid">
+        <div>
+          <h2 class="display">Движок переписали с нуля</h2>
+          <p class="lead">4A одними из первых выпустили игру с трассировкой лучей и 60 кадрами в секунду на новых консолях — Metro Exodus Enhanced Edition. В 2039 технологию развили дальше, а звуковой движок написали заново.</p>
+          <p>Digital Foundry отмечает трассированное глобальное освещение, RT-отражения и почти безумную детализацию, похожую на Nanite из Unreal Engine 5. На PS5 и PS5 Pro есть режим 60 кадров с трассировкой. Игра весит 135 ГБ. Системные требования, которые появились в Steam с RTX 4090 и 64 ГБ памяти, студия назвала ошибкой.</p>
+        </div>
+        <button class="trailer-card trailer-card--tall" type="button" data-yt="bqzOAYzuyu4" data-title="State of Play">
+          <img decoding="async" src="assets/img/loc-swampnight.webp" alt="" width="2544" height="1216" loading="lazy">
+          <span class="trailer-card__play" aria-hidden="true"></span>
+          <span class="trailer-card__text"><b>Геймплей с State of Play</b><small>3 сентября 2026, PS5 Pro, 60 кадров с трассировкой</small></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="eds" id="editions" data-theme="ember" data-rad="low">
+      <div class="wrap eds__collector">
+        <figure class="eds__helmet">
+          <img decoding="async" src="assets/img/ed-helmet.webp" alt="Носимая реплика шлема Чужака с противогазом" width="440" height="375" loading="lazy">
+        </figure>
+        <div class="eds__collector-text">
+          <h2 class="display">Шлем Чужака можно надеть</h2>
+          <p class="lead">Коллекционное издание собрано вокруг носимой реплики спартанского шлема, сделанной по игровой модели.</p>
+          <p>В коробке ещё SteelBook, артбук в твёрдой обложке, сюжетное дополнение, цифровой артбук и саундтрек. Тираж ограничен.</p>
+          <p class="price"><b>$299.99</b> Collector's Edition</p>
+        </div>
+      </div>
+
+      <div class="wrap eds__row">
+        <article class="ed">
+          <img decoding="async" src="assets/img/ed-standard.webp" alt="Обложка стандартного издания METRO 2039 для PS5" width="440" height="563" loading="lazy">
+          <div>
+            <h3>Standard <b>$69.99</b></h3>
+            <p>Только игра, на диске или в цифре. На PC в коробке лежит код.</p>
+          </div>
+        </article>
+        <article class="ed">
+          <img decoding="async" src="assets/img/ed-deluxe.webp" alt="Коробка Deluxe Edition METRO 2039 для PS5" width="440" height="584" loading="lazy">
+          <div>
+            <h3>Deluxe <b>$109.99</b></h3>
+            <p>Игра, сюжетное дополнение, цифровой артбук и саундтрек. В физической версии добавляются SteelBook и твёрдый артбук. За предзаказ дают облик «Фюрер Хантер».</p>
+          </div>
+        </article>
+        <div class="eds__bonus">
+          <h3>За любой предзаказ</h3>
+          <p>Specialist Pack: три чертежа для рюкзака. Equipment ускоряет крафт, Chemtech даёт больше фильтров для радиоактивных зон, Munitions приносит редкие патроны. Надеть можно только один. Предзаказ открыт с 13 октября 2026.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="dev" id="dev" data-theme="dev" data-rad="none">
+      <div class="wrap dev__intro">
+        <h2 class="display">Как делали игру</h2>
+        <div class="dev__lead">
+          <figure class="dev__team">
+            <img decoding="async" src="assets/img/dev-team.webp" alt="Команда 4A Games в офисе у логотипа студии" width="1920" height="1280" loading="lazy">
+          </figure>
+          <p class="lead">4A Games основали в Киеве в 2005 году выходцы из GSC Game World, которые работали над движком S.T.A.L.K.E.R. Сегодня в студии больше 200 человек. Над 2039 работали семь лет, дольше, чем планировали. В 2022 году проект перезапустили и написали сюжет заново.</p>
+        </div>
+      </div>
+
+      <div class="wrap metro-line">
+        <p class="metro-line__name">Линия 2039</p>
+        <ol class="metro-line__stations">
+          <li><time>22.05.2019</time><b>Новая игра</b><span>После успеха Exodus THQ Nordic договаривается с 4A о следующем проекте.</span></li>
+          <li><time>13.08.2020</time><b>Embracer</b><span>Embracer Group покупает студию.</span></li>
+          <li class="is-transfer"><time>2022</time><b>Перезапуск</b><span>Версию с открытым миром и Хантером в главной роли откладывают, сюжет пишут заново.</span></li>
+          <li><time>10–12.04.2026</time><b>Утечка «M4»</b><span>В сеть попадает сборка отменённой версии на 120 ГБ. Студия признаётся, что было неприятно.</span></li>
+          <li><time>13.04.2026</time><b>Название</b><span>Deep Silver подтверждает METRO 2039.</span></li>
+          <li><time>16.04.2026</time><b>Первый показ</b><span>Xbox First Look. Миллион вишлистов за две недели.</span></li>
+          <li><time>07.06.2026</time><b>Hunter</b><span>Трейлер на Xbox Games Showcase: «There is a liar in these tunnels».</span></li>
+          <li><time>25.08.2026</time><b>Renegade</b><span>Геймплейный трейлер на Gamescom.</span></li>
+          <li><time>03.09.2026</time><b>Дата</b><span>State of Play и точный день выхода.</span></li>
+          <li><time>13.10.2026</time><b>Предзаказ</b><span>Открываются предзаказы и коллекционное издание.</span></li>
+          <li class="is-terminal"><time>04.02.2027</time><b>Конечная</b><span>Выход игры.</span></li>
+        </ol>
+      </div>
+
+      <div class="wrap dev__people">
+        <figure class="person">
+          <img decoding="async" src="assets/img/dev-glukhovsky.webp" alt="Портрет Дмитрия Глуховского" width="1050" height="700" loading="lazy">
+        </figure>
+        <div>
+          <h3 class="subhead">Дмитрий Глуховский</h3>
+          <p>Автор вселенной «Метро» и соавтор сценария. Придумал «Метро 2033» ещё в школе и выложил первую версию романа бесплатно в интернете. Про 2039 говорит, что она «будет мрачнее всего, что вы видели раньше».</p>
+          <p class="crew">Креативный директор — Андрей Шевченко, со-креативный директор — Павел Ульмер, исполнительный продюсер — Джон Блох, музыка — Алексей Омельчук, который пишет для серии с Metro 2033.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="facts" id="facts" data-theme="ash" data-rad="low">
+      <div class="wrap">
+        <h2 class="display">Что легко пропустить</h2>
+        <div class="facts__text">
+          <p><b>20:39.</b> Столько показывают часы Чужака в трейлере, а у поезда с детьми номер вагона 2039.</p>
+          <p><b>Рисунки.</b> Среди детских рисунков в трейлере спрятаны логотипы 4A Games и Deep Silver.</p>
+          <p><b>Сохранение.</b> Чтобы сохраниться, нужно расписаться в документах на станции.</p>
+          <p><b>Огонь.</b> Пламя зажигалки под землёй тянется по сквозняку и показывает дорогу.</p>
+          <p><b>Самогон.</b> Аппарат в убежище приносит одну бутылку в день.</p>
+          <p><b>Название.</b> Первая номерная часть без подзаголовка, а рабочее название проекта было «M4».</p>
+          <p><b>Чистый воздух.</b> Под землёй есть закрытые помещения, где противогаз можно снять.</p>
+          <p><b>Утечка.</b> Это первая игра серии, промежуточная версия которой ушла в сеть до релиза.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="finale" id="countdown" data-theme="final" data-rad="high">
+      <div class="finale__inner">
+        <div class="metro-clock" role="timer" aria-live="off" aria-label="Обратный отсчёт до выхода игры">
+          <div class="metro-clock__mount" aria-hidden="true"><i></i><i></i></div>
+          <div class="metro-clock__box">
+            <div class="metro-clock__window metro-clock__window--days"><div class="seg seg--red" data-seg="000"></div></div>
+            <div class="metro-clock__window metro-clock__window--time"><div class="seg seg--red" data-seg="00:00:00"></div></div>
+          </div>
+          <div class="metro-clock__labels" aria-hidden="true"><span>дней</span><span>часов · минут · секунд</span></div>
+        </div>
+        <p class="sr-only" id="countdown-text"></p>
+        <h2 class="finale__date display">4 февраля 2027</h2>
+        <p class="finale__note">На PS5, Xbox Series X|S и PC. В части Азии и Океании игра выйдет 5 февраля.</p>
+        <div class="finale__cta">
+          <a class="btn btn--primary" href="https://store.steampowered.com/app/2590240/METRO_2039/" target="_blank" rel="noopener">Steam</a>
+          <a class="btn btn--ghost" href="https://store.epicgames.com/p/metro-2039-086260" target="_blank" rel="noopener">Epic Games Store</a>
+          <a class="btn btn--ghost" href="https://www.deepsilver.com/games/metro2039" target="_blank" rel="noopener">Сайт игры</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <img decoding="async" src="assets/img/logo.png" alt="METRO 2039" width="150" height="52" loading="lazy">
+      <p>Личный фанатский сайт. Картинки и названия принадлежат 4A Games, Deep Silver и PLAION. Информация собрана по официальным материалам и превью на октябрь 2026 года, часть деталей официально не подтверждена. Текстуры гермозатвора: Poly Haven (CC0).</p>
+      <p class="footer__music">Музыка: Алексей Омельчук — «Dead City» (Metro Exodus OST) и «Metro 2033 Main Theme» (Metro 2033 OST). Права на музыку принадлежат 4A Games и Deep Silver.</p>
+    </div>
+  </footer>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script src="vendor/SplitText.min.js"></script>
+  <script src="vendor/lenis.min.js"></script>
+  <script src="vendor/three.min.js"></script>
+  <script src="js/door-tex.js"></script>
+  <script src="js/door3d.js"></script>
+  <script src="js/seg.js"></script>
+  <script src="js/watch.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

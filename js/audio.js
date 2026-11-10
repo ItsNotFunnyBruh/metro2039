@@ -18,7 +18,7 @@
     var tr = tracks[k], a = tr.el;
     cancelAnimationFrame(tr.raf);
     var from = a.volume, t0 = performance.now();
-    if (to > 0 && a.paused) a.play().catch(function () {});
+    if (to > 0 && a.paused) a.play().catch(function () { });
     (function step(t) {
       var p = Math.max(0, Math.min(1, (t - t0) / ms));
       a.volume = Math.max(0, Math.min(1, from + (to - from) * p));

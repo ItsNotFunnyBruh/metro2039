@@ -57,17 +57,17 @@
   });
 
   var THEMES = {
-    ash:     { bg: "#0d0c0a", accent: "#e8742c" },
+    ash: { bg: "#0d0c0a", accent: "#e8742c" },
     surface: { bg: "#17110b", accent: "#ee7f33" },
-    tunnel:  { bg: "#0c0e0b", accent: "#b6bf7c" },
-    story:   { bg: "#060606", accent: "#e8742c" },
-    reich:   { bg: "#170405", accent: "#e0262d" },
-    beast:   { bg: "#0b0d0c", accent: "#c4cd6c" },
-    horror:  { bg: "#040507", accent: "#8fb0cc" },
-    olive:   { bg: "#0e100b", accent: "#f2b544" },
-    ember:   { bg: "#130d08", accent: "#e8742c" },
-    dev:     { bg: "#0c0c0e", accent: "#e0b84e" },
-    final:   { bg: "#11100d", accent: "#ff4a32" }
+    tunnel: { bg: "#0c0e0b", accent: "#b6bf7c" },
+    story: { bg: "#060606", accent: "#e8742c" },
+    reich: { bg: "#170405", accent: "#e0262d" },
+    beast: { bg: "#0b0d0c", accent: "#c4cd6c" },
+    horror: { bg: "#040507", accent: "#8fb0cc" },
+    olive: { bg: "#0e100b", accent: "#f2b544" },
+    ember: { bg: "#130d08", accent: "#e8742c" },
+    dev: { bg: "#0c0c0e", accent: "#e0b84e" },
+    final: { bg: "#11100d", accent: "#ff4a32" }
   };
   var currentTheme = null;
   function applyTheme(name, rad) {
@@ -580,7 +580,7 @@
       if (!img) return;
       img.loading = "eager";
       var decoded = img.decode ? img.decode() : Promise.resolve();
-      decoded.catch(function () {}).then(function () { idle(next); });
+      decoded.catch(function () { }).then(function () { idle(next); });
     }
     idle(next);
   }

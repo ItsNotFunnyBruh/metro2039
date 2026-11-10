@@ -380,7 +380,7 @@
               return;
             }
             var compiled = renderer.compileAsync ? renderer.compileAsync(scene, camera) : Promise.resolve(renderer.compile(scene, camera));
-            compiled.catch(function () {}).then(function () {
+            compiled.catch(function () { }).then(function () {
               idle(function () { if (!active) frame(); done(); });
             });
           })();
